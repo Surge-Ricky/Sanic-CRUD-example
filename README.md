@@ -1,4 +1,4 @@
-This is a simple CRUD app made with Sanic, Postgres, and SQLALchemy (Asyngpg).
+This is a simple CRUD app made with Sanic (https://sanic.dev/en/), Postgres, and SQLALchemy (Asyngpg).
 
 Example website - http://174.138.64.173:8000
 
