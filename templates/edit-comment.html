@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+{% block title %}Edit Comment{% endblock %}
+{% block header %}Edit Comment{% endblock %}
+{% block content %}<div class="login-form">
+    <form action="" method="post">
+        <label for="content">Content:</label>
+        <textarea id="content" name="content" required>{{ comment.content }}</textarea>
+        <input type="submit" class="green-button" value="Update Comment">
+    </form></div>
+{% endblock %}

@@ -1,0 +1,11 @@
+DEV NOTE - 
+
+This page currently doesn't doesn't render anywhere. 
+
+If you check under user_routes.py, you'll find this:
+
+@bp_user.route('/', methods=['GET'])
+async def index(request):
+    return redirect('/users')
+
+which redirects anyone who visits the homepage to the /users page to view all users.

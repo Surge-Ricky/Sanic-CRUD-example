@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block title %}Edit Post{% endblock %}
+{% block header %}Edit Post{% endblock %}
+{% block content %}<div class="login-form">
+    <form action="" method="post">
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" value="{{ post.title }}" required>
+        <label for="content">Content:</label>
+        <textarea id="content" name="content" required>{{ post.content }}</textarea>
+        <input type="submit" class="green-button" value="Update Post">
+    </form></div>
+{% endblock %}

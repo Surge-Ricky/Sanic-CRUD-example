@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>{% block header %}{% endblock %}</h1>
+        {% block content %}
+        <div class="intro">
+            {% block intro %}{% endblock %}
+        </div>
+        {% endblock %}
+    </div>
+</body>
+</html>

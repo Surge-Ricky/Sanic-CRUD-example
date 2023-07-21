@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block title %}{{ username.title() }}'s Comments{% endblock %}
+{% block header %}<a href="/{{ username }}">{{ username.title() }}'s</a> Comments{% endblock %}
+{% block content %}
+    <a href="/{{ username }}/comments/add">Add new comment</a>
+    <ul>
+        {% for comment in comments %}
+            <li class="list-item">
+                <p>{{ comment.content }}</p>
+                <div class="button-row">
+                    <a href="/{{ username }}/comments/{{ comment.id }}/edit" class="edit-button">Edit</a>
+                    <form method="POST">
+                        <input type="hidden" name="delete_comment_id" value="{{ comment.id }}">
+                        <input type="submit" value="Delete" class="delete-button">
+                    </form>
+                </div>
+            </li>
+        {% endfor %}
+    </ul><br>
+    <a href="/users"<span class="green-button">View All Users</span></a>
+{% endblock %}

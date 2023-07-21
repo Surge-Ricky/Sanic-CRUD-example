@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block title %}Add Post{% endblock %}
+{% block header %}Add Post for {{ username.title() }}{% endblock %}
+{% block content %}
+    <form action="/{{ username }}/posts/add" method="post">
+        <label for="title">Title:</label><br>
+        <input type="text" id="title" name="title" placeholder="Title" required><br><br>
+        <label for="content">Content:</label><br>
+        <textarea id="content" name="content" required></textarea><br>
+        <input type="submit" class="green-button" value="Add Post">
+    </form><br><a href="/{{username}}">Click Here</a> to go back.
+{% endblock %}

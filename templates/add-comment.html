@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+{% block title %}Add Comment{% endblock %}
+{% block header %}Add Comment for {{ username.title() }}{% endblock %}
+{% block content %}
+    <form action="/{{ username }}/comments/add" method="post">
+        <label for="content">Comment:</label><br>
+        <textarea id="content" name="content" required></textarea><br>
+        <input type="submit" class="green-button" value="Add Comment">
+    </form><br><a href="/{{username}}">Click Here</a> to go back.
+{% endblock %}

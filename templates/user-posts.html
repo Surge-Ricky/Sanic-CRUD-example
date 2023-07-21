@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block title %}{{ username.title() }}'s Posts{% endblock %}
+{% block header %}<a href="/{{ username }}">{{ username.title() }}'s</a> Posts{% endblock %}
+{% block content %}
+    <a href="/{{ username }}/posts/add">Add new post</a>
+    <ul>
+        {% for post in posts %}
+            <li class="list-item">
+                <br><p>Title: {{ post.title|escape }}</p><br>
+                <p>Content: {{ post.content|escape }}</p>
+                <div class="button-row">
+                    <a href="/{{ username }}/posts/{{ post.id }}/edit" class="edit-button">Edit</a>
+                    <form method="POST">
+                        <input type="hidden" name="delete_post_id" value="{{ post.id }}">
+                        <input type="submit" value="Delete" class="delete-button">
+                    </form>
+                </div>
+            </li>
+        {% endfor %}
+    </ul><br>
+    <a href="/users"<span class="green-button">View All Users</span></a>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+{% block title %}All Users{% endblock %}
+
+{% block content %}
+
+<div class="intro">
+<h3>Sanic CRUD App</h3>
+Welcome! This is an example CRUD app made with Sanic (a Flask-like web framework), Postgres, and SQLAlchemy (asyncpg).<br>
+<br>
+<a href="https://sanic.dev/en/">Click Here</a> to learn more about Sanic.<br><br>
+<strong>Note -</strong><br><br> This is a work in progress (last updated 7-21-2023) and will be published to github when it is ready.
+</div>
+
+
+<h1>Users</h1>
+    <ul>
+        {% for user in users %}
+        <li>
+            <strong>Username:</strong> <a href="/{{ user.username }}">{{ user.username.title() }}</a>
+            {% if is_admin %}
+            - <a href="/{{ user.username }}/delete" class="delete-button user-delete-button">Delete</a>
+            {% endif %}
+            <div class="posts-comments">
+                <a href="/{{ user.username }}/posts">Posts: <span class="number">{{ user.post_count }}</span></a> - 
+                <a href="/{{ user.username }}/comments">Comments: <span class="number">{{ user.comment_count }}</span></a>
+            </div>
+        </li>
+    {% endfor %}
+    </ul><br>
+    <a href="/users/add"><span class="green-button">Add User</span></a><br><br>
+{% endblock %}

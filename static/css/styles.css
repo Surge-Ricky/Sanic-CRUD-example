@@ -1,0 +1,217 @@
+/* styles.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+body {
+    background-color: #282828;
+    color: #ddd;
+    font-family: 'Roboto', sans-serif;
+
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.intro {
+    width: 100%;
+    max-width: 760px;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 2em 0px 0px 0px;
+    box-sizing: border-box;
+    background-color: #353535;
+}
+.container {
+    width: 80%;
+    max-width: 800px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+}
+
+li {
+    background-color: #343434;
+    padding: 20px;
+    margin-bottom: 20px; /* increased margin */
+    border-radius: 5px;
+}
+
+a {
+    color: #9cdf7c; /* light green */
+    text-decoration: none;
+}
+
+a:hover {
+    color: #b5f2a9; /* lighter green */
+}
+
+.list-item {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: #343434; /* lighter color */
+}
+
+.list-item p {
+    margin: 0;
+    color: #fff;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+label {
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+input[type="text"], input[type="password"], textarea {
+    margin-bottom: 20px;
+    padding: 10px;
+    width: 100%;
+    max-width: 500px;
+    border: none;
+    border-radius: 5px;
+    background-color: #444;
+    color: #ddd;
+    font-family: 'Roboto', sans-serif;
+}
+
+.green-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #5b9a3c;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.green-button:hover {
+    background-color: #68af45; /* lighter green */
+}
+
+.delete-button {
+    padding: 9px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #e22518; /* red */
+    color: #fff;
+    margin-top: 12px; /* space below the content */
+    transition: background-color 0.3s ease;
+}
+
+.delete-button:hover {
+    background-color: #fd2c1e;
+    color: white;
+}
+
+.user-delete-button {
+    padding: 2px 4px;
+    font-size: 0.8em;
+}
+
+.edit-button {
+    padding: 7px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #067790; /* red */
+    color: #fff;
+    margin-top: 12px; /* space below the content */
+    transition: background-color 0.3s ease;
+}
+
+.edit-button:hover {
+    background-color: #0a8eab;
+    color: white;
+}
+
+.button-row {
+    display: flex;
+    gap: 10px;
+}
+
+.posts-comments {
+    margin-top: 12px; /* space below the username */
+}
+
+.no-items {
+    background-color: #594444;
+    color: #ffb6b6;
+    font-weight: 500;
+}
+.posts-comments a {
+    color: #70daff;
+}
+.number {
+    padding: 0px 5px;
+    background-color: #374146;
+    border-radius: 12px;
+}
+.login-form {
+    background-color: #2f2f2f;
+    padding: 2em;
+    margin-top: 1em;
+}
+/* styles.css */
+
+/* ... existing styles ... */
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
+        padding-top: 0px;
+    }
+
+    body {
+        justify-content: flex-start;
+        font-size: 1.2em;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    li, .list-item {
+        padding: 14px;
+    }
+
+    input[type="text"], input[type="password"], textarea {
+        padding: 14px;
+        font-size: 0.9em;
+        width: 95%;
+    }
+
+    input[type="submit"], .delete-button, .user-delete-button {
+
+        font-size: 0.9em;
+    }
+    .login-form {
+
+        padding: 2em;
+        margin-top: 1em;
+    }
+    .posts-comments {
+        margin-top: 16px;
+    }
+}

@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% block title %}Profile - {{ user.username.title() }}{% endblock %}
+{% block header %}{{ user.username.title() }}'s Profile{% endblock %}
+{% block content %}
+    <h2><a href="/{{ user.username }}/posts">Posts</a></h2>
+    <ul>
+        {% if user.posts %}
+            {% for post in user.posts %}
+                <li>
+                    <p><strong>Title</strong>: {{ post.title }}</p>
+                    <p><strong>Content</strong>: {{ post.content }}</p>
+                </li>
+            {% endfor %}
+        {% else %}
+            <li class="no-items">No posts to display</li>
+        {% endif %}
+    </ul>
+    <a href="/{{user.username}}/posts/add">Click here</a> to add a post
+
+    <h2><a href="/{{ user.username }}/comments">Comments</a></h2>
+    <ul>
+        {% if user.comments %}
+            {% for comment in user.comments %}
+                <li><strong>Comment</strong>: {{ comment.content }}</li> 
+        {% endfor %}
+        {% else %}
+            <li class="no-items">No comments to display</li>
+        {% endif %}
+    </ul>
+    <a href="/{{user.username}}/comments/add">Click here</a> to add a comment
+    <br><br><br>
+    <a href="/users"<span class="green-button">View All Users</span></a>
+{% endblock %}
