@@ -1,6 +1,6 @@
 This is a simple CRUD app made with Sanic (https://sanic.dev/en/), Postgres, and SQLALchemy (Asyngpg).
 
-Example website - http://174.138.64.173:8000
+Example website - http://000.zip or http://174.138.64.173/
 
 In this example project are blueprints. Routes are split up. 
 
